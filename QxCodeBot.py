@@ -11,13 +11,14 @@ def CarregarConfig():
 config = CarregarConfig()
 botToken = config['BOT_TOKEN']
 chat_id = config['CHAT_ID']
+topicoId = config.get('TOPICO_ID')
 
 bot = telebot.TeleBot(botToken)
 
 
 def enviarLembrete():
     textoLembrete = "Não esqueçam de responder o diário de turmas!!!"
-    bot.send_message(chat_id, textoLembrete)
+    bot.send_message(chat_id, textoLembrete, message_thread_id=topicoId)
     print("mensagem enviada com sucesso")
 
 
