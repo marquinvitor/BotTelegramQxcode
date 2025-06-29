@@ -17,12 +17,12 @@ bot = telebot.TeleBot(botToken)
 
 
 def enviarLembrete():
-    textoLembrete = "Não esqueçam de responder o diário de turmas!!!"
+    textoLembrete = "🚨🚨Não esqueçam de responder o diário de turmas🚨🚨"
     bot.send_message(chat_id, textoLembrete, message_thread_id=topicoId)
     print("mensagem enviada com sucesso")
 
 
-horarioAgendado = "19:00" 
+horarioAgendado = "21:51" 
 schedule.every().monday.at(horarioAgendado).do(enviarLembrete)
 schedule.every().tuesday.at(horarioAgendado).do(enviarLembrete)
 schedule.every().wednesday.at(horarioAgendado).do(enviarLembrete)
