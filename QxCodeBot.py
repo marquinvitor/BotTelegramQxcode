@@ -22,7 +22,7 @@ def enviarLembrete():
     print("mensagem enviada com sucesso")
 
 
-horarioAgendado = "21:51" 
+horarioAgendado = "19:00" 
 schedule.every().monday.at(horarioAgendado).do(enviarLembrete)
 schedule.every().tuesday.at(horarioAgendado).do(enviarLembrete)
 schedule.every().wednesday.at(horarioAgendado).do(enviarLembrete)
